@@ -1,0 +1,13 @@
+.projecttxt {
+  color: gray;
+}
+
+.projectbox {
+  border: 1px black solid;
+  margin: 0px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
