@@ -6,9 +6,10 @@ import styles from "../../styles/project.module.css";
 
 /* Project compiler to DOM */
 function Project() {
+  const { flex, projectbox } = styles;
   return (
     <>
-      <div className={styles.flex}>
+      <div className={flex + " " + projectbox}>
         {projectData.map((data, index) => {
           const [openModalState, setOpenModalState] = useState(0);
 

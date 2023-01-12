@@ -17,6 +17,12 @@ const projectData = [
     link: "imgurl comming",
     tag: ["JS", "HTML", "React"],
   },
+  {
+    title: "Third project ",
+    text: "Something about the third project",
+    link: "imgurl comming",
+    tag: ["JS", "HTML", "React"],
+  },
 ];
 
 export default projectData;

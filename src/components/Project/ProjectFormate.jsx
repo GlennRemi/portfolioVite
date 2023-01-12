@@ -4,11 +4,12 @@ import styles from "../../styles/project.module.css";
 function ProjectFormate(props) {
   const { onClickHandler, info, keyid } = props;
   const { title, projectsimg, imgalt, text } = info;
+  const { projectbox, projecttext } = styles;
   return (
     <>
-      <div className={styles.projectbox} key={keyid} onClick={onClickHandler}>
-        <h2>{title}</h2>
-        <p>{text}</p>
+      <div className={projectbox} key={keyid} onClick={onClickHandler}>
+        <h2 className={projecttext}>{title}</h2>
+        <p className={projecttext}>{text}</p>
         <img src={projectsimg} alt={imgalt} />
         <div>
           {info.tag.map((techStack, index) => (

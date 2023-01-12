@@ -4,12 +4,19 @@ import styles from "../../styles/project.module.css";
 function ProjectFormateModal(props) {
   const { onClickHandler, info, keyid } = props;
   const { title, projectsimg, imgalt, text } = info;
+  const { projecttext, projectbox, modal, projectclosemodal } = styles;
   return (
     <>
-      <div className={styles.projectbox} key={keyid} onClick={onClickHandler}>
-        <h2>{title}</h2>
+      <div className={projectbox + " " + modal} key={keyid}>
+        <div
+          className={projectbox + " " + projectclosemodal}
+          onClick={onClickHandler}
+        >
+          X
+        </div>
+        <h2 className={projecttext}>{title}</h2>
         <img src={projectsimg} alt={imgalt} />
-        <p>{text}</p>
+        <p className={projecttext}>{text}</p>
         <a href={"www.vg.no"}>Click here to try.</a>{" "}
         <a href={"www.vg.no"}>Click here to view code.</a>
         <div>

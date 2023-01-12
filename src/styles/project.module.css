@@ -1,13 +1,26 @@
-.projecttxt {
-  color: gray;
+.projecttext {
+  color: rgb(0, 0, 0);
 }
 
 .projectbox {
   border: 1px black solid;
-  margin: 0px;
+  margin: 1rem;
 }
 
 .flex {
   display: flex;
   flex-direction: row;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+  width: 30%;
+  align-self: center;
+  background-color: gray;
+}
+
+.projectclosemodal {
+  width: 1.5rem;
+  height: 1.5rem;
 }
