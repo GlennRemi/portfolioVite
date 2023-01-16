@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 
 function ButtonToggle() {
   const [newcolorMode, setNewMode] = useState("darkmode");
-  const { setColorMode, colorMode } = useContext(CurrentTheme);
+  const { setColorMode } = useContext(CurrentTheme);
 
   function handleClick() {
     setNewMode((oldMode) =>
@@ -14,8 +14,7 @@ function ButtonToggle() {
 
   return (
     <div>
-      <button onClick={handleClick}>test</button>
-      <p>{colorMode}</p>
+      <button onClick={handleClick}>{newcolorMode}?</button>
     </div>
   );
 }
