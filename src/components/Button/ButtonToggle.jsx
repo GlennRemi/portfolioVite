@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { CurrentTheme } from "../../App";
+import { useState, useContext } from "react";
 
 function ButtonToggle() {
-  const light = "../../styles/darkmode.css";
-  const dark = "../../style/darkmode.css";
-  const [colorMode, setMode] = useState(light);
+  const [newcolorMode, setNewMode] = useState("darkmode");
+  const { setColorMode, colorMode } = useContext(CurrentTheme);
 
   function handleClick() {
-    setMode((oldMode) => (oldMode === light ? dark : light));
-    const modeToggle = document.createElement("link");
-    modeToggle.href = colorMode;
-    modeToggle.rel = "stylesheet";
-    document.head.appendChild(modeToggle);
+    setNewMode((oldMode) =>
+      oldMode === "darkmode" ? "lightmode" : "darkmode"
+    );
+    setColorMode(newcolorMode);
   }
 
   return (

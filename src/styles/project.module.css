@@ -17,10 +17,17 @@
   z-index: 10;
   width: 30%;
   align-self: center;
-  background-color: gray;
 }
 
 .projectclosemodal {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.light {
+  background-color: gray;
+}
+
+.dark {
+  background-color: rgb(19, 19, 19);
 }

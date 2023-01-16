@@ -1,13 +1,24 @@
 import styles from "../../styles/project.module.css";
+import { CurrentTheme } from "../../App";
+import { useContext } from "react";
 
 /* Maps out modal view of each project to DOM */
 function ProjectFormateModal(props) {
   const { onClickHandler, info, keyid } = props;
   const { title, projectsimg, imgalt, text } = info;
+
+  /* Styles */
   const { projecttext, projectbox, modal, projectclosemodal } = styles;
+  const colorToggle = useContext(CurrentTheme);
+
   return (
     <>
-      <div className={projectbox + " " + modal} key={keyid}>
+      <div
+        className={
+          projectbox + " " + modal + " " + colorToggle.theme.modalcolor
+        }
+        key={keyid}
+      >
         <div
           className={projectbox + " " + projectclosemodal}
           onClick={onClickHandler}
