@@ -5,6 +5,9 @@ import { useState, createContext } from "react";
 import Project from "./components/Project/Project_default_compiler";
 import NavBar from "./components/NavBar/NavBar_Compiler";
 import ButtonToggle from "./components/Button/ButtonToggle";
+import RepoDisplay from "./components/API/RepoDisplay";
+import RepoCount from "./components/API/RepoCount";
+import RecentChanges from "./components/API/GHRecentChanges";
 
 /* Styles */
 import darkmode from "./styles/darkmode.module.css";
@@ -26,6 +29,9 @@ function App() {
       <CurrentTheme.Provider value={{ theme, setColorMode }}>
         <ButtonToggle />
         <Project />
+        <RepoDisplay />
+        <RepoCount />
+        <RecentChanges />
       </CurrentTheme.Provider>
     </div>
   );
@@ -38,3 +44,9 @@ export default App;
 // import { useContext } from "react";
 // const colorToggle = useContext(CurrentTheme);
 // Use colorToggle.theme.(CSS-CLASSNAME)
+
+// Improve DnL Button layout
+//
+//
+//
+//
