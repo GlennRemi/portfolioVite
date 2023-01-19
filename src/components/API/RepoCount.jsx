@@ -12,7 +12,7 @@ function RepoCount() {
       });
   }, []);
 
-  if (info) return <h3>Current public repos: {info.public_repos}</h3>;
+  if (info) return <h3>Current total public repos: {info.public_repos}</h3>;
 }
 
 export default RepoCount;
