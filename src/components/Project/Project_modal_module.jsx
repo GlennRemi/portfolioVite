@@ -8,21 +8,16 @@ function ProjectFormateModal(props) {
   const { title, projectsimg, imgalt, text } = info;
 
   /* Styles */
-  const { projecttext, projectbox, modal, projectclosemodal } = styles;
+  const { projecttext, box, modal, projectclosemodal } = styles;
   const colorToggle = useContext(CurrentTheme);
 
   return (
     <>
       <div
-        className={
-          projectbox + " " + modal + " " + colorToggle.theme.modalcolor
-        }
+        className={box + " " + modal + " " + colorToggle.theme.modalcolor}
         key={keyid}
       >
-        <div
-          className={projectbox + " " + projectclosemodal}
-          onClick={onClickHandler}
-        >
+        <div className={box + " " + projectclosemodal} onClick={onClickHandler}>
           X
         </div>
         <h2 className={projecttext}>{title}</h2>

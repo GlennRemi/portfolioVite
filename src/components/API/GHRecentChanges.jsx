@@ -10,7 +10,6 @@ function RecentChanges() {
       (response) => {
         const fetchedData = [...response.data];
         setEvets(fetchedData.slice(0, 3));
-        console.log(fetchedData);
       }
     );
   }, []);
@@ -18,13 +17,20 @@ function RecentChanges() {
   if (events) {
     return (
       <div>
+        <h3 className={styles.committext}>Recent commits to GitHub:</h3>
         {events.map((upload, i) => (
-          <div key={i} className={styles.eventbox}>
-            <h3>Repo: {upload.repo.name.replace("GlennRemi/", "")}</h3>
+          <div key={i} className={styles.commitEventBox}>
+            <h3 className={styles.committext}>
+              Repo: {upload.repo.name.replace("GlennRemi/", "")}
+            </h3>
             {upload.payload.commits !== undefined ? (
-              <h3>Commit message:{upload.payload.commits[0].message}</h3>
+              <p className={styles.committext}>
+                Message: {upload.payload.commits[0].message}
+              </p>
             ) : null}
-            <h3>{upload.created_at}</h3>
+            <p className={styles.committext}>
+              {upload.created_at.replace("T", " ").replace("Z", ".")}
+            </p>
           </div>
         ))}
       </div>

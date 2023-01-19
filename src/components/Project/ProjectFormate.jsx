@@ -8,13 +8,15 @@ function ProjectFormate(props) {
   const { title, projectsimg, imgalt, text } = info;
 
   /* Styles */
-  const { projectbox, projecttext } = styles;
+  const { box, projecttext, projectboxsize } = styles;
   const colorToggle = useContext(CurrentTheme);
 
   return (
     <>
       <div
-        className={projectbox + " " + colorToggle.theme.projectcolor}
+        className={
+          box + " " + colorToggle.theme.projectcolor + " " + projectboxsize
+        }
         key={keyid}
         onClick={onClickHandler}
       >

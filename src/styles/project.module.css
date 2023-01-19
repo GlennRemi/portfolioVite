@@ -2,7 +2,7 @@
   color: rgb(0, 0, 0);
 }
 
-.projectbox {
+.box {
   border: 1px black solid;
   margin: 1rem;
 }
@@ -22,4 +22,14 @@
 .projectclosemodal {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.projectboxsize {
+  width: 15rem;
+  height: 20rem;
+}
+
+.projectcontainer {
+  width: 73rem;
+  height: 22rem;
 }

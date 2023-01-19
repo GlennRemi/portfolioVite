@@ -1,4 +1,16 @@
-.eventbox {
+.commitEventBox {
+  width: 20rem;
+  max-width: 27rem;
+  margin-top: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  word-break: keep-all;
   border: 1px black solid;
-  margin: 1rem;
+  margin: 0.3rem;
+}
+
+.committext {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
 }

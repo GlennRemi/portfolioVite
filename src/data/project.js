@@ -6,16 +6,10 @@ const projectData = [
     tag: ["JS", "HTML", "React"],
   },
   {
-    title: "Second project ",
-    text: "Something about the second project",
+    title: "Spreadsheet",
+    text: "Spreadsheet wtih basic function made with javascript",
     link: "imgurl comming",
-    tag: ["JS", "HTML", "React"],
-  },
-  {
-    title: "Third project ",
-    text: "Something about the third project",
-    link: "imgurl comming",
-    tag: ["JS", "HTML", "React"],
+    tag: ["JS"],
   },
   {
     title: "Third project ",
